@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+       <com.google.android.material.button.MaterialButton
+           android:id="@+id/inputImageBth"
+           android:text="take Image"
+           app:cornerRadius="5dp"
+           android:layout_weight="1"
+           android:layout_marginEnd="5dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+       <com.google.android.material.button.MaterialButton
+           android:id="@+id/recognizeTextBth"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:cornerRadius="5dp"
+           android:layout_weight="1"
+           android:layout_marginStart="5dp"
+           android:text="Recognize Text"/>
+
+   </LinearLayout>
+
+    <TextView
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Recognized Text" />
+    <EditText
+        android:textSize="12dp"
+        android:id="@+id/recognizeTextEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageIv"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_launcher_background"
+                app:strokeWidth="2dp"/>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
